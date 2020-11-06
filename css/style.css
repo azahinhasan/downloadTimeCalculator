@@ -16,6 +16,38 @@ h1:hover{
 	animation: wiggle 0.6s;
 }
 
+/*div.mainDev{
+	position: relative;
+	width: 400px;
+	height: 200px;
+	border: 3px solid red;
+  }
+
+
+  div.DevOutput {
+	position: absolute;
+	left: auto;
+	width: 100px;
+	height: 120px;
+	top:0px;
+	border: 3px solid blue;
+  } 
+  
+  div.DevInput {
+	position: absolute;
+	left: 150px;
+	width: 200px;
+	height: 120px;
+	border: 3px solid green;
+  } */
+
+
+
+
+
+
+
+
 #size, #speed {
     width: 50%;
     height: 50px;
@@ -31,7 +63,7 @@ h1:hover{
 
   #form{
 	display: block;
-    text-align: left;
+    text-align: center;
     display: block;
     text-align: center;
     position: relative;
@@ -40,10 +72,11 @@ h1:hover{
     font-size: 18px
   }
 
-  #result {
+ #result, .DevOutput {
+	top:0px;
     width: 100%;
-    height: 150px;
-    padding: 12px 20px;
+    height: 200px;
+	padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid rgba(255,255,255,0.4);
     border-radius: 4px;
@@ -52,9 +85,18 @@ h1:hover{
     color: whitesmoke;
     text-align: center;
     resize: none;
-
 	font-weight: bold;
   }
+
+
+  #result:hover{
+	background-color: #FFFFFF;
+	color: #167b8d;
+	border: 2px solid  #167b8d;
+  }
+
+
+
 
 
 
@@ -131,10 +173,11 @@ h1:after{
   }
   
   .button span {
+	  
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
-	transition: 0.5s;
+	transition: 0.3s;
   }
   
   .button span:after {
@@ -143,14 +186,22 @@ h1:after{
 	opacity: 0;
 	top: 0;
 	right: -20px;
-	transition: 0.5s;
+	transition: 0.3s;
   }
   
   .button:hover span {
 	padding-right: 25px;
   }
   
+  .button:hover{
+	background-color: #FFFFFF;
+	color: #167b8d;
+	border: 2px solid  #167b8d;
+  }
+  
+
   .button:hover span:after {
+	  
 	opacity: 1;
 	right: 0;
   }

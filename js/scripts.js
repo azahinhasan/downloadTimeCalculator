@@ -4,7 +4,7 @@ function myFunction() {
     var fastCal=0;
     var spaceCount=0; 
     var sentencesCount=0;
-    var hours=0,days=0,min=0,sec=0;
+    var hours=00,days=00,min=00,sec=00;
     var dot='.';
     //var re = /[.!?]/;
 
@@ -45,12 +45,21 @@ function myFunction() {
      thrCal = thrCal.toFixed(3);
      sec = (thrCal + "").split(".")[0];
      
-   
+
+    if(hours == 'NaN'){
+        hours=00;
+    }
+   if(min == 'NaN'){
+        min=00;
+    }
+    if(sec == 'NaN'){
+        sec=00;
+    }
     // down.innerHTML = (n + "").split(".")[1];
 
-    document.getElementById("days").innerHTML = ""+days;
-    document.getElementById("hours").innerHTML = " : "+ hours+" : ";
-    document.getElementById("min").innerHTML = ""+ min;
-    document.getElementById("sec").innerHTML = " : "+ sec;
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML =  hours;
+    document.getElementById("min").innerHTML =  min;
+    document.getElementById("sec").innerHTML =  sec;
 
 }

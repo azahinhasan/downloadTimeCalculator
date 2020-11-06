@@ -11,9 +11,9 @@
 <body>
 <h1><u>Download Calculator</u></h1>
 <br>
-
-<dev id ="form">
-    <table id="input">
+<dev class="mainDev">
+<dev id ="form" >
+    <table id="input" >
         <tr>
             <td>
                 Size (GB) : 
@@ -40,26 +40,53 @@
                 
             </td>
         </tr>
-       
     </table>
-     
     <button  onclick="myFunction()"   class="button"><span>Click</span></button>
+
 </dev>
 <br>
-
 <br>
 <br>
-<div  id="result">
-    <h3>Total Time is </h3>
-    <span id="days"></span>
-    <span id="hours"></span>
-    <span id="min"></span>
-    <span id="sec"></span> 
+<br>
+<div  id="result" class="DevOutput">
+    <h3> Time Gonna Take </h3>
+    <table id="input">
+        <tr>
+            <td>
+                Days :
+             </td>
+            <td>
+               Hour :
+            </td>
+            <td>
+                Minute :
+            </td>
+            <td>
+                Second 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span id="days">00</span>
+             </td>
+            <td>
+                <span id="hours">00</span>
+            </td>
+            <td>
+                <span id="min">00</span>
+            </td>
+            <td>
+                <span id="sec">00</span> 
+            </td>
+        </tr>
+    </table>
+    
+      
 </div>
 
+</dev>
 
-
-<div id ="note"><span id ="ps">[P.S.</span> Click anywhere on the sceen to see the result.<span id ="ps">]</span></div>
+<div id ="note"><span id ="ps">[Contacts : </span> fb.com/a.h.zahin <span id ="ps">]</span></div>
 
 <script src="js/scripts.js"></script>
 
