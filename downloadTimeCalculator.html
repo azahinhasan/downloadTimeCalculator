@@ -5,25 +5,46 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body onclick="myFunction()" onKeyPress="myFunction()">
+
+
+<body>
 <h1><u>Download Calculator</u></h1>
 <br>
 
-<form>
-    <textarea type="text" id="size" name="size"></textarea>
-    <textarea type="text" id="speed" name="speed"></textarea>
+<form >
+    <table id="input">
+        <tr>
+            <td>
+                Size (GB) : 
+            </td>
+            <td>
+                <textarea type="text" id="size" name="size"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Speed (Mbps) : 
+            </td>
+            <td>
+                <textarea type="text" id="speed" name="speed"></textarea>
+            </td>
+        </tr>
+    </table>
+     
+    
 </form>
 <br>
 <br>
-<!--<button onclick="myFunction()"  class="button">Click</button>-->
+<button onclick="myFunction()"  class="button">Click</button>
 
 <br>
 <br>
 <br>
 <div  id="result">
-    <span id="days"></span><br>
-    <span id="hours"></span><br> 
-    <span id="min"></span><br> 
+    <h3>Total Time is </h3>
+    <span id="days"></span>
+    <span id="hours"></span>
+    <span id="min"></span>
     <span id="sec"></span> 
 </div>
 

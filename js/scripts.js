@@ -4,7 +4,7 @@ function myFunction() {
     var fastCal=0;
     var spaceCount=0; 
     var sentencesCount=0;
-    var hours,days,min,sec;
+    var hours=0,days=0,min=0,sec=0;
     var dot='.';
     //var re = /[.!?]/;
 
@@ -12,16 +12,19 @@ function myFunction() {
 
 
      fastCal=(size*1024)/(speed/8);
-     fastCal=(fastCal/60)/60;
+     fastCal=((fastCal/60)/60);
      
      if(fastCal>24){
-        thrdCal=fastCal/24;
+        thrdCal=(fastCal+1)/24;
         days=(thrdCal + "").split(".")[0];
         thrdCal = thrdCal.toFixed(8);
-
+        
         fastCal=(thrdCal + "").split(".")[1];
+        
         fastCal=fastCal*0.00000001;
-        fast=fastCal*24;
+        
+        fastCal=fastCal*24;
+       // sentencesCount=fastCal;
         //fastCal=
 
      }
@@ -45,9 +48,9 @@ function myFunction() {
    
     // down.innerHTML = (n + "").split(".")[1];
 
-    document.getElementById("days").innerHTML = "D : "+days;
-    document.getElementById("hours").innerHTML = "H : "+ hours;
-    document.getElementById("min").innerHTML = "M : "+ min;
-    document.getElementById("sec").innerHTML = "S : "+ sec;
+    document.getElementById("days").innerHTML = ""+days;
+    document.getElementById("hours").innerHTML = " : "+ hours+" : ";
+    document.getElementById("min").innerHTML = ""+ min;
+    document.getElementById("sec").innerHTML = " : "+ sec;
 
 }
