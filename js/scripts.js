@@ -14,11 +14,16 @@ function myFunction() {
      fastCal=(size*1024)/(speed/8);
      fastCal=(fastCal/60)/60;
      
-     if(fastCal>60){
+     if(fastCal>24){
         thrdCal=fastCal/24;
         days=(thrdCal + "").split(".")[0];
+        thrdCal = thrdCal.toFixed(8);
+
         fastCal=(thrdCal + "").split(".")[1];
+        fastCal=fastCal*0.00000001;
+        fast=fastCal*24;
         //fastCal=
+
      }
      fastCal = fastCal.toFixed(5);
      hours=(fastCal + "").split(".")[0];
@@ -27,7 +32,7 @@ function myFunction() {
 
      secCal = (fastCal + "").split(".")[1];
      secCal=secCal*0.00001;
-     secCal=(secCal*60)+10;
+     secCal=(secCal*60);
      secCal = secCal.toFixed(3);
      min = (secCal + "").split(".")[0];
      
@@ -40,7 +45,7 @@ function myFunction() {
    
     // down.innerHTML = (n + "").split(".")[1];
 
-    document.getElementById("days").innerHTML = "D : ";
+    document.getElementById("days").innerHTML = "D : "+days;
     document.getElementById("hours").innerHTML = "H : "+ hours;
     document.getElementById("min").innerHTML = "M : "+ min;
     document.getElementById("sec").innerHTML = "S : "+ sec;
