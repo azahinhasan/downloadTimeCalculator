@@ -35,8 +35,13 @@ function myFunction() {
 
      secCal = (fastCal + "").split(".")[1];
      secCal=secCal*0.00001;
-     secCal=(secCal*60);
+     secCal=(secCal*60)+7;
+     if(secCal>60){
+        secCal=secCal-7;
+     }
+
      secCal = secCal.toFixed(3);
+      
      min = (secCal + "").split(".")[0];
      
      thrCal = (secCal + "").split(".")[1];
@@ -65,10 +70,15 @@ function myFunction() {
 }
 
 
-function copyEmail() {
-    /*var copyText = document.getElementById("myInput");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999)
-    document.execCommand("copy");*/
-    alert("Copied the text: " + copyText.value);
+function copyEmail(value) {
+    var tempInput = document.createElement("input");
+    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+    tempInput.value = value;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    alert("Copied my Email : " + tempInput.value);
+    document.body.removeChild(tempInput);
+
+   
   }
