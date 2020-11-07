@@ -61,9 +61,22 @@ h1:hover{
 
   }
 
+#sizeOption,#speedOption {
+    width: 100%;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(10, 147, 156);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 19px;
+    resize: none;
+
+  }
+
   #form{
 	display: block;
-    text-align: center;
+    text-align: left;
     display: block;
     text-align: center;
     position: relative;
@@ -94,8 +107,6 @@ h1:hover{
 	color: #167b8d;
 	border: 2px solid  #167b8d;
   }
-
-
 
 
 
@@ -174,7 +185,7 @@ h1:after{
 	text-align: center;
 	font-size: 28px;
 	padding: 20px;
-	width: 380px;
+	width: 530px;
     height: 70px;
 	transition: all 0.5s;
 	cursor: pointer;

@@ -1,6 +1,8 @@
 function myFunction() {
     var size = document.getElementById("size").value;
     var speed = document.getElementById("speed").value;
+    var sizeOption = document.getElementById("sizeOption").value;
+    var speedOption = document.getElementById("speedOption").value;
     var fastCal=0;
     var spaceCount=0; 
     var sentencesCount=0;
@@ -11,9 +13,23 @@ function myFunction() {
 
 
 
-     fastCal=(size*1024)/(speed/8);
+     if(sizeOption=='GB' && speedOption=="Mbps"){
+        fastCal=(size*1024)/(speed/8);
+        
+     }else if(sizeOption=='MB' && speedOption=="MBps"){
+        fastCal=(size/speed);
+     }else if(sizeOption=='MB' && speedOption=="Mbps"){
+        fastCal=size/(speed/8);
+     }else if(sizeOption=='GB' && speedOption=="MBps"){
+        fastCal=(size*1024)/(speed);
+     }
+
+
+
+
+
      fastCal=((fastCal/60)/60);
-     
+
      if(fastCal>24){
         thrdCal=(fastCal+1)/24;
         days=(thrdCal + "").split(".")[0];
@@ -35,9 +51,9 @@ function myFunction() {
 
      secCal = (fastCal + "").split(".")[1];
      secCal=secCal*0.00001;
-     secCal=(secCal*60)+7;
+     secCal=(secCal*60)+0;
      if(secCal>60){
-        secCal=secCal-7;
+        secCal=secCal-0;
      }
 
      secCal = secCal.toFixed(3);
