@@ -14,7 +14,7 @@ function myFunction() {
 
 
      if(sizeOption=='GB' && speedOption=="Mbps"){
-        fastCal=(size*1024)/(speed/8);
+        fastCal=(size*1024)/(speed/8.5);
         
      }else if(sizeOption=='MB' && speedOption=="MBps"){
         fastCal=(size/speed);
@@ -26,12 +26,14 @@ function myFunction() {
 
 
 
-
+     document.getElementById("days").innerHTML = fastCal;
 
      fastCal=((fastCal/60)/60);
 
+   
+
      if(fastCal>24){
-        thrdCal=(fastCal+1)/24;
+        thrdCal=(fastCal)/24;
         days=(thrdCal + "").split(".")[0];
         thrdCal = thrdCal.toFixed(8);
         
@@ -78,10 +80,10 @@ function myFunction() {
     }
     // down.innerHTML = (n + "").split(".")[1];
 
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML =  hours;
-    document.getElementById("min").innerHTML =  min;
-    document.getElementById("sec").innerHTML =  sec;
+   document.getElementById("days").innerHTML = days;
+   document.getElementById("hours").innerHTML =  hours;
+   document.getElementById("min").innerHTML =  min;
+   document.getElementById("sec").innerHTML =  sec;
 
 }
 
