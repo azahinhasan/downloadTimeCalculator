@@ -4,11 +4,8 @@ function myFunction() {
     var sizeOption = document.getElementById("sizeOption").value;
     var speedOption = document.getElementById("speedOption").value;
     var fastCal=0;
-    var spaceCount=0; 
-    var sentencesCount=0;
     var hours=00,days=00,min=00,sec=00;
-    var dot='.';
-    //var re = /[.!?]/;
+
 
 
 
@@ -33,7 +30,7 @@ function myFunction() {
    
 
      if(fastCal>24){
-        thrdCal=(fastCal)/24;
+        thrdCal=fastCal/24;
         days=(thrdCal + "").split(".")[0];
         thrdCal = thrdCal.toFixed(8);
         
@@ -41,9 +38,8 @@ function myFunction() {
         
         fastCal=fastCal*0.00000001;
         
-        fastCal=fastCal*24;
-       // sentencesCount=fastCal;
-        //fastCal=
+        fastCal=(fastCal*24)-1;
+
 
      }
      fastCal = fastCal.toFixed(5);
@@ -51,12 +47,10 @@ function myFunction() {
     
 
 
+
      secCal = (fastCal + "").split(".")[1];
      secCal=secCal*0.00001;
-     secCal=(secCal*60)+0;
-     if(secCal>60){
-        secCal=secCal-0;
-     }
+     secCal=(secCal*60)-1;
 
      secCal = secCal.toFixed(3);
       
@@ -69,16 +63,20 @@ function myFunction() {
      sec = (thrCal + "").split(".")[0];
      
 
-    if(hours == 'NaN'){
-        hours=00;
-    }
-   if(min == 'NaN'){
-        min=00;
-    }
-    if(sec == 'NaN'){
-        sec=00;
-    }
-    // down.innerHTML = (n + "").split(".")[1];
+
+
+   if(days=="-0" || days==0 || days == 'NaN'){
+      days='00';
+   }
+   if(hours=="-0" || hours==0 || hours == 'NaN'){
+      hours='00';
+   }
+   if(min=="-0" || min==0 || min == 'NaN'){
+      min='00';
+   }
+   if(sec=="-0" || sec==0 || sec == 'NaN'){
+      sec='00';
+   }
 
    document.getElementById("days").innerHTML = days;
    document.getElementById("hours").innerHTML =  hours;
