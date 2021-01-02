@@ -1,1 +1,1 @@
-# wordCounter
+# Download Time Calculator
